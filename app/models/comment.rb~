@@ -4,6 +4,9 @@ class Comment < ActiveRecord::Base
 validates :name, :email, :body, :presence => true
 validate :article_should_be_published
 
+after_create :email_article_author
+
+
 
 belongs_to :article
 
