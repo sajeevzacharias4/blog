@@ -41,7 +41,6 @@
     <%= f.datetime_select :published_at %>
   </div>
   <div class="actions">
-  <%= submit_or_cancel(f) %>
-
+    <%= f.submit %>
   </div>
 <% end %>

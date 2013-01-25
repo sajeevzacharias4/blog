@@ -75,7 +75,7 @@ before_filter :authenticate, :except=>[:index, :show]
   # DELETE /articles/1
   # DELETE /articles/1.json
   def destroy
-    @article = current_user.articles.find(params[:id])
+    @article = Article.find(params[:id])
     @article.destroy
 
     respond_to do |format|
